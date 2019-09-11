@@ -6,18 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/mylv"
-        android:layout_width="413dp"
-        android:layout_height="582dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="8dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="129dp"
-        android:layout_height="63dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="620dp" />
+        <ListView
+            android:id="@+id/mylv"
+            android:layout_width="413dp"
+            android:layout_height="582dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <Button
+            android:layout_width="129dp"
+            android:layout_height="63dp"
+            android:onClick="jjj"
+            android:text="Button"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="620dp" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
