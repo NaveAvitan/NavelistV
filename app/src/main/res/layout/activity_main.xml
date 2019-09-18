@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/mylv"
+        android:layout_width="25dp"
+        android:layout_height="68dp" >
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </ListView>
 
     <LinearLayout
         android:layout_width="402dp"
         android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="8dp">
-
-        <ListView
-            android:id="@+id/mylv"
-            android:layout_width="413dp"
-            android:layout_height="582dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+        android:orientation="vertical">
 
         <Button
             android:layout_width="129dp"
             android:layout_height="63dp"
-            android:onClick="jjj"
-            android:text="Button"
+            android:onClick="nextact"
+            android:text="@string/button"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="620dp" />
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
