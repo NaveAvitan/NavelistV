@@ -7,4 +7,40 @@
     android:orientation="vertical"
     tools:context=".Main2Activity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Capital city:" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Population:" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="359dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <Button
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:text="Back" />
 </LinearLayout>
