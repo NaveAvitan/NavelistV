@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
     public void nextact(View view) {
         Intent gi= new Intent(this,Main2Activity.class);
-        gi.putExtra("n:",choice);
+        gi.putExtra("n:", choice);
         startActivity(gi);
     }
 }
