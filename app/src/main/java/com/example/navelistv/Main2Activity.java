@@ -1,5 +1,6 @@
 package com.example.navelistv;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,6 +51,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int po, long id) {
         if (x == 0) {

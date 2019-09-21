@@ -15,7 +15,8 @@
         android:id="@+id/CC"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:text="Capital city:" />
+        android:text="@string/capital_city"
+        tools:ignore="HardcodedText" />
 
     <Space
         android:layout_width="match_parent"
@@ -25,7 +26,8 @@
         android:id="@+id/POP"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:text="Population:" />
+        android:text="@string/population"
+        tools:ignore="HardcodedText" />
 
     <Space
         android:layout_width="match_parent"
@@ -44,5 +46,5 @@
         android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:onClick="back"
-        android:text="Back" />
+        android:text="@string/back" />
 </LinearLayout>

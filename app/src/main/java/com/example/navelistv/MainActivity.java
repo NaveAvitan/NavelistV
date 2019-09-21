@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lv = (ListView) findViewById(R.id.mylv);
+        lv = (ListView) findViewById(R.id.lv);
         lv.setOnClickListener((OnClickListener) this);
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 

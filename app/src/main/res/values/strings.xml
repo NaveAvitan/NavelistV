@@ -2,4 +2,7 @@
     <string name="app_name">NavelistV</string>
     <string name="button">Button</string>
     <string name="next">Next</string>
+    <string name="capital_city">capital city:</string>
+    <string name="population">population:</string>
+    <string name="back">back</string>
 </resources>
