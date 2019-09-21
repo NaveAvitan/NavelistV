@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        lv2 = (ListView) findViewById(R.id.mylv);
+        lv2 = (ListView) findViewById(R.id.lv2);
         lv2.setOnClickListener((View.OnClickListener) this);
         lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         txv1 = (TextView) findViewById(R.id.CC);

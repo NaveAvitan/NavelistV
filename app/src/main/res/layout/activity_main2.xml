@@ -33,6 +33,7 @@
 
     <ListView
         android:layout_width="match_parent"
+        android:id="@+id/lv2"
         android:layout_height="359dp" />
 
     <Space
