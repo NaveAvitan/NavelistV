@@ -26,10 +26,12 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         lv2 = (ListView) findViewById(R.id.lv2);
-        lv2.setOnItemClickListener(this);
-        lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         txv1 = (TextView) findViewById(R.id.CC);
         txv2 = (TextView) findViewById(R.id.POP);
+
+        lv2.setOnItemClickListener(this);
+        lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
 
         if (x == 0) {
             ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, Europe);
@@ -50,9 +52,9 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    @SuppressLint("SetTextI18n")
+
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int po, long id) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int po, long id) {
         if (x == 0) {
             switch (po) {
                 case 0:
