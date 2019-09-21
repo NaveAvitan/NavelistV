@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     ListView lv;
     String[] yabeshet = {"Europe", "America", "Asia", "Africa"};
     String choice;
+    int ch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +34,15 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast toast = Toast.makeText(this,""+yabeshet[position],Toast.LENGTH_SHORT);
-        choice = yabeshet[position];
+        choice =yabeshet [position];
+        ch= position;
         toast.show();
+
     }
 
     public void nextact(View view) {
         Intent gi= new Intent(this,Main2Activity.class);
-        gi.putExtra("n:", choice);
+        gi.putExtra("n:", ch);
         startActivity(gi);
     }
 }
