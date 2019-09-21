@@ -22,22 +22,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lv = (ListView) findViewById(R.id.lv);
-        lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         lv.setOnItemClickListener(this);
+        lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
-
-        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, yabeshet);
+        ArrayAdapter <String> adp= new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,yabeshet);
         lv.setAdapter(adp);
+
+
+
+
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        Toast toast;
-        toast = Toast.makeText(this, "" + yabeshet[position], Toast.LENGTH_SHORT);
-        choice =yabeshet [position];
-        ch= position;
-        toast.show(); }
+
 
 
     public void neatest(View view) {
@@ -45,5 +42,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         gi = new Intent(this,Main2Activity.class);
         Intent intent = gi.putExtra("n:", ch);
         startActivity(gi);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        Toast toast;
+        toast=Toast.makeText(this, "" + yabeshet[position], Toast.LENGTH_SHORT);
+        ch= position;
+        toast.show();
     }
 }
