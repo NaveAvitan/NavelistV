@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <ListView
-        android:id="@+id/lv"
-        android:layout_width="match_parent"
-        android:layout_height="515dp">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 
-    </ListView>
+     <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="88dp" />
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="515dp" />
 
-    <Button
-        android:layout_width="143dp"
-        android:layout_height="88dp"
-        android:onClick="nextact"
-        android:text="@string/next"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="620dp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <Button
+            android:layout_width="143dp"
+            android:layout_height="88dp"
+            android:onClick="neatest"
+            android:text="@string/next"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="620dp" />
+
+
 </LinearLayout>

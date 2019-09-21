@@ -1,17 +1,16 @@
 package com.example.navelistv;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Switch;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
     ListView lv;
@@ -33,17 +32,17 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast toast = Toast.makeText(this,""+yabeshet[position],Toast.LENGTH_SHORT);
+        Toast toast;
+        toast = Toast.makeText(this, "" + yabeshet[position], Toast.LENGTH_SHORT);
         choice =yabeshet [position];
         ch= position;
-        toast.show();
+        toast.show(); }
 
-    }
 
-    public void nextact(View view) {
-        Intent gi= new Intent(this,Main2Activity.class);
-        gi.putExtra("n:", ch);
+    public void neatest(View view) {
+        Intent gi;
+        gi = new Intent(this,Main2Activity.class);
+        Intent intent = gi.putExtra("n:", ch);
         startActivity(gi);
     }
 }
-
