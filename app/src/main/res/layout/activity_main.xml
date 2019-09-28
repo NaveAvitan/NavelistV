@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
-
-     <Space
-            android:layout_width="match_parent"
-            android:layout_height="32dp" />
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
 
     <ListView
-        android:id="@+id/lv"
+        android:id="@+id/lv333333"
         android:layout_width="match_parent"
-        android:layout_height="277dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.65" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:onClick="next"
+        android:text="Next" />
 
     <Space
-            android:layout_width="match_parent"
-            android:layout_height="42dp" />
-
-        <Button
-            android:layout_width="143dp"
-            android:layout_height="88dp"
-            android:onClick="neatest"
-            android:text="@string/next"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="620dp" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"/>
 
 </LinearLayout>
+

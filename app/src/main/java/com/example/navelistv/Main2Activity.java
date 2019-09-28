@@ -21,33 +21,34 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     TextView txv1;
     TextView txv2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        lv2 = (ListView) findViewById(R.id.lv2);
-        txv1 = (TextView) findViewById(R.id.CC);
-        txv2 = (TextView) findViewById(R.id.POP);
+        lv2 = (ListView) findViewById(R.id.lv1);
+        txv1 = (TextView) findViewById(R.id.city);
+        txv2 = (TextView) findViewById(R.id.pop);
 
         lv2.setOnItemClickListener(this);
         lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
 
         if (x == 0) {
-            ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, Europe);
-            lv2.setAdapter(adp);
+            ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, Europe);
+            lv2.setAdapter(adp1);
         }
         if (x == 1) {
-            ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, america);
-            lv2.setAdapter(adp);
+            ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, america);
+            lv2.setAdapter(adp1);
         }
         if (x == 2) {
-            ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, asia);
-            lv2.setAdapter(adp);
+            ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, asia);
+            lv2.setAdapter(adp1);
         }
         if (x == 3) {
-            ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, africa);
-            lv2.setAdapter(adp);
+            ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, africa);
+            lv2.setAdapter(adp1);
         }
 
     }
@@ -55,6 +56,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int po, long id) {
+
         if (x == 0) {
             switch (po) {
                 case 0:

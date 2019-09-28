@@ -6,44 +6,37 @@
     android:orientation="vertical"
     tools:context=".Main2Activity">
 
-    <Space
+    <TextView
+        android:id="@+id/city"
         android:layout_width="match_parent"
-        android:layout_height="36dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:text="Capital city:" />
 
     <TextView
-        android:id="@+id/CC"
+        android:id="@+id/pop"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="@string/capital_city"
-        tools:ignore="HardcodedText" />
+        android:layout_height="0dp"
+        android:layout_weight="0.10"
+        android:text="Population: " />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="38dp" />
-
-    <TextView
-        android:id="@+id/POP"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:text="@string/population"
-        tools:ignore="HardcodedText" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="41dp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07"/>
 
     <ListView
+        android:id="@+id/lv1"
         android:layout_width="match_parent"
-        android:id="@+id/lv2"
-        android:layout_height="359dp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="48dp" />
+        android:layout_height="0dp"
+        android:layout_weight="0.53"/>
 
     <Button
-        android:layout_width="181dp"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
         android:onClick="back"
-        android:text="@string/back" />
+        android:layout_gravity="center"
+        android:text="Back" />
+
 </LinearLayout>
