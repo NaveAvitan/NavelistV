@@ -11,12 +11,12 @@
             android:layout_width="match_parent"
             android:layout_height="32dp" />
 
-        <ListView
-            android:id="@+id/lv"
-            android:layout_width="match_parent"
-            android:layout_height="515dp" />
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="277dp" />
 
-        <Space
+    <Space
             android:layout_width="match_parent"
             android:layout_height="42dp" />
 
