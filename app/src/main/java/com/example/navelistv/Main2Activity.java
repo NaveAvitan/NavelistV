@@ -11,8 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    Intent si = getIntent();
-    int x = si.getIntExtra("n", 1);
+    Intent si;
+    int x;
     ListView lv2;
     String[] Europe = {"Israel", "Spain", "Italy", "France", "Sweden", "Germany", "England"};
     String[] america = {"Brazil", "USA", "Mexico", "Canada", "Argentina", "Colombia", "Peru"};
@@ -29,6 +29,8 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         lv2 = (ListView) findViewById(R.id.lv1);
         txv1 = (TextView) findViewById(R.id.city);
         txv2 = (TextView) findViewById(R.id.pop);
+         si= getIntent();
+        x = si.getIntExtra("n", 100);
 
         lv2.setOnItemClickListener(this);
         lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);

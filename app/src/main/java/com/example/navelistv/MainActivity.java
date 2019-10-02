@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void next(View view) {
         Intent gi = new Intent(this, Main2Activity.class);
-        gi.putExtra("n:", ch);
+        gi.putExtra("n", ch);
         startActivity(gi);
     }
 }
