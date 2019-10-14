@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView lv;
-    public String[] yab= {"Europe","America","Asia","Africa"};
-    int ch=1;
+    public String[] yab = {"Europe", "America", "Asia", "Africa"};
+    int ch = -1;
 
 
     @Override
@@ -25,29 +25,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lv = (ListView) findViewById(R.id.lv333333);
-        ArrayAdapter<String> adp1= new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,yab);
+        ArrayAdapter<String> adp1 = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, yab);
         lv.setAdapter(adp1);
         lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         lv.setOnItemClickListener(this);
     }
 
 
-
-
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast toast;
-        toast=Toast.makeText(this, "you picked" + yab[position], Toast.LENGTH_SHORT);
-        ch= position;
+        toast = Toast.makeText(this, "you picked" + yab[position], Toast.LENGTH_SHORT);
+        ch = position;
         toast.show();
     }
 
 
     public void next(View view) {
-        Intent gi = new Intent(this, Main2Activity.class);
-        gi.putExtra("n", ch);
-        startActivity(gi);
+        if (ch == -1) {
+            Toast toast1;
+            toast1 = Toast.makeText(this, "pls choose", Toast.LENGTH_SHORT);
+            toast1.show();
+        } else {
+            Intent gi = new Intent(this, Main2Activity.class);
+            gi.putExtra("n", ch);
+            startActivity(gi);
+        }
     }
 }
 
