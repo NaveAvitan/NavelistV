@@ -10,6 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * at this activity the user recive 7 countries from his choosen yab and hr can see info about each country by click it
+ */
+
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     Intent si;
     int x;
@@ -26,28 +30,35 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         lv2 = (ListView) findViewById(R.id.lv1);
         txv1 = (TextView) findViewById(R.id.city);
         txv2 = (TextView) findViewById(R.id.pop);
-         si= getIntent();
+
+        si= getIntent();
         x = si.getIntExtra("n", 100);
 
         lv2.setOnItemClickListener(this);
         lv2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
-
+        /**
+         * this action connect between the ListView to the string[] that the user picked
+         */
         if (x == 0) {
             ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, Europe);
             lv2.setAdapter(adp1);
         }
+
         if (x == 1) {
             ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, america);
             lv2.setAdapter(adp1);
         }
+
         if (x == 2) {
             ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, asia);
             lv2.setAdapter(adp1);
         }
+
         if (x == 3) {
             ArrayAdapter<String> adp1 = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, africa);
             lv2.setAdapter(adp1);
@@ -57,6 +68,9 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
 
     @Override
+    /**
+     * this act get the country that the user picked and show on the 2 textviews the information about the capital city and population
+     */
     public void onItemClick(AdapterView<?> adapterView, View view, int po, long id) {
 
         if (x == 0) {
@@ -189,6 +203,10 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 
+    /**
+     * this act return the user to yabpick activity
+     * @param view
+     */
     public void back(View view) {
     finish();
     }
